@@ -37,45 +37,43 @@ public class Main {
         }
 
         System.out.println("Задача №4");
-        for (int mounth = 1, contribution = 15000; contribution <= 12_000_000; mounth++,contribution = (int) (contribution * 1.07)) {
-
+        for (int mounth = 1, contribution = 15000; contribution <= 12_000_000; mounth++, contribution = (int) (contribution * 1.07)) {
             System.out.printf("Месяц %s, сумма накоплений равна %s рублей\n", mounth, contribution);
-            System.out.println("Всего месяцев потребуется " + mounth);
         }
+
 
         System.out.println("Задача №5");
         for (int mounth = 1, contribution = 15000; contribution <= 12_000_000; mounth++) {
             contribution = (int) (contribution * 1.07);
             if (mounth % 6 == 0) {
                 System.out.printf("Месяц %s, сумма накоплений равна %s рублей\n", mounth, contribution);
-                System.out.println("Всего месяцев потребуется " + mounth);
             }
-
         }
 
         System.out.println("Задача №6");
         double contribution = 15000;
         int mounthNineYears = 9 * 12;
-        for (double mounth = 1; mounth <= mounthNineYears; mounth += 0.5) {
-            contribution =  contribution * 1.07;
-            System.out.printf("Месяц %s, сумма накоплений равна %.2f рублей\n", mounth, contribution);
-
+        for (int mounth = 1; mounth <= mounthNineYears; mounth++) {
+            contribution = contribution * 1.07;
+            if (mounth % 6 == 0) {
+                System.out.printf("Месяц %s, сумма накоплений равна %.2f рублей\n", mounth, contribution);
+            }
         }
         System.out.println("Задача №7");
-            for (int day = 5; day <= 31; day++) {
-                if (day % 5 == 0) {
-                    System.out.printf("Сегодня пятница, %s-е число. Необходимо подготовить отчет\n", day);
-                }
+        for (int day = 5; day <= 31; day++) {
+            if (day % 5 == 0) {
+                System.out.printf("Сегодня пятница, %s-е число. Необходимо подготовить отчет\n", day);
             }
+        }
         System.out.println("Задача №8");
-            int nowYear=2024;
-            int beforeYear=nowYear-200;
-            int afterYear=nowYear+100;
-            for (int year = 0; year <afterYear; year++) {
-                if (year >beforeYear && year %79==0) {
-                    System.out.println(year);
-                }
+        int nowYear = 2024;
+        int beforeYear = nowYear - 200;
+        int afterYear = nowYear + 100;
+        for (int year = 0; year < afterYear; year++) {
+            if (year > beforeYear && year % 79 == 0) {
+                System.out.println(year);
             }
+        }
 
     }
 }
